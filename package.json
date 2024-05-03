@@ -1,0 +1,46 @@
+{
+  "name": "node-starter",
+  "version": "1.0.0",
+  "description": "A Node.js starter project with TypeScript, ESLint, Prettier, Zod, T3-Env, Husky, and Nodemon.",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier .",
+    "format:fix": "prettier . --write",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node --env-file=.env --import=extensionless/register dist/index.js",
+    "dev": "nodemon --ignore dist/ --ext ts --exec 'npm start'",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "starter",
+    "eslint",
+    "prettier",
+    "zod",
+    "extensionless",
+    "husky",
+    "nodemon"
+  ],
+  "author": "Ariel Nathan",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "@t3-oss/env-core": "^0.10.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.8",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "extensionless": "^1.9.6",
+    "husky": "^9.0.11",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0",
+    "zod": "^3.23.5"
+  }
+}
